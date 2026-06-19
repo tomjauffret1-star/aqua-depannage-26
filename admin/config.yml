@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: tomjauffret1-etoile/aqua-depannage-26
   branch: main
 
 media_folder: "images"
