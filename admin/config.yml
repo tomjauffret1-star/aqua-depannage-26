@@ -1,1 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
 
+locale: "fr"
+
+collections:
+  - name: "infos"
+    label: "Informations générales"
+    files:
+      - name: "contact"
+        label: "Coordonnées"
+        file: "_data/contact.json"
+        fields:
+          - { label: "Téléphone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Adresse", name: "address", widget: "string" }
+
+      - name: "hero"
+        label: "Haut de page"
+        file: "_data/hero.json"
+        fields:
+          - { label: "Titre principal", name: "h1", widget: "string" }
+          - { label: "Sous-titre", name: "subtitle", widget: "text" }
+
+      - name: "tarifs"
+        label: "Tarifs"
+        file: "_data/tarifs.json"
+        fields:
+          - { label: "Prix dépannage", name: "depannage", widget: "string" }
+          - { label: "Prix débouchage", name: "debouchage", widget: "string" }
+
+  - name: "faq"
+    label: "FAQ"
+    folder: "_data/faq"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Question", name: "question", widget: "string" }
+      - { label: "Réponse", name: "answer", widget: "text" }
